@@ -1,0 +1,27 @@
+.divider {
+	border-left: 5px solid red;
+	height: 30px;
+	margin-inline: 8px;
+}
+.divider:first-child {
+	display: none;
+}
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 8px;
+}
+/* button:focus {
+    background-color: red;
+  } */
+.buttonActive {
+	background-color: red;
+}
+button {
+	padding: 8px;
+	background-color: cornflowerblue;
+	border-radius: 8px;
+	border: 1px solid gray;
+	transition: background-color 0.5s;
+}
