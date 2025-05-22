@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useState } from 'react'
 const StopWatch = () => {
 	const [count, setCount] = useState(0)
 	const [clearTimer, setClearTimer] = useState(false)
-	const timRef = useRef(null)
+	// const timRef = useRef(null)
 	//   useEffect(() => {
 	//     timRef.current = setInterval(() => setCount((prev) => prev + 1), 1000);
 

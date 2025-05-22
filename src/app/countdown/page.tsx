@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from 'react'
 
 function Counter() {
 	const [count, setCount] = useState(10)
-	const timeRef = useRef(null)
+	const timeRef = useRef<NodeJS.Timeout | null>(null)
 
 	//   const handleClick = () => {
 	//     setCount(prev=>prev+1);
@@ -18,7 +18,11 @@ function Counter() {
 			timeRef.current = setInterval(() => {
 				setCount(prev => prev - 1)
 			}, 1000)
-			return () => clearInterval(timeRef.current)
+			return () => {
+				if (timeRef?.current) {
+					clearInterval(timeRef.current)
+				}
+			}
 		}
 	}, [count])
 
